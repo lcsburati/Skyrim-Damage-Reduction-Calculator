@@ -1,13 +1,18 @@
-# Compiled output
 *.out
 *.o
 
-# Text files
 *.txt
 
-# macOS
 .DS_Store
 
-# IDE / Editor
 .vscode/
 .idea/
+
+build/
+build-*/
+
+
+bin/
+obj/
+*.o
+*.out
