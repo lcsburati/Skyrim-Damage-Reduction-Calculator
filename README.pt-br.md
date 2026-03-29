@@ -1,6 +1,6 @@
 # Calculadora de Armor Rating do Skyrim
 
-[Read in English](README.md)
+[Read in English](README.md) | [中文说明](README.zh-cn.md)
 
 **Objetivo:** Simular o sistema de Armor Rating do Skyrim para calcular a redução de dano com base nas peças de armadura equipadas.
 
@@ -19,13 +19,14 @@ Redução de Dano % = (AR Exibido + AR Oculto) × 0,12
 *   **Armor Rating Oculto:** Cada peça de armadura equipada (elmo, peitoral, luvas, botas) concede um bônus invisível de **25 pontos**, totalizando **100 pontos ocultos** para o conjunto completo.
 *   **Limite de Armadura (Armor Cap):** Skyrim possui um limite máximo de redução de dano físico de **80%**. Para atingir esse limite, você precisa de um Armor Rating total de **667**. Com o bônus oculto de 4 peças, você precisa de apenas **567 exibidos** para atingir o cap.
 
-## Como Rodar
-
-Você pode compilar o projeto usando `gcc`:
+Você pode compilar o projeto usando `CMake`:
 
 ```bash
-gcc main.c -o main.out
-./main.out <dano>
+mkdir build
+cd build
+cmake ..
+make
+./bin/Armor <dano>
 ```
 
 **Exemplo:**

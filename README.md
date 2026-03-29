@@ -1,6 +1,6 @@
 # Skyrim Armor Rating Calculator
 
-[Leia em Português](README.pt-br.md)
+[Leia em Português](README.pt-br.md) | [中文说明](README.zh-cn.md)
 
 **Objective:** Simulate Skyrim's Armor Rating system to calculate damage reduction based on equipped armor pieces.
 
@@ -19,13 +19,14 @@ Damage Reduction % = (Displayed AR + Hidden AR) × 0.12
 *   **Hidden Armor Rating:** Each equipped armor piece (helmet, chest, gauntlets, boots) grants an invisible bonus of **25 points**, totaling **100 hidden points** for a full set.
 *   **Armor Cap:** Skyrim has a maximum physical damage reduction of **80%**. To reach this cap, you need a total Armor Rating of **667**. With the hidden bonus from 4 pieces, you only need **567 displayed** to hit the cap.
 
-## How to Run
-
-You can compile the project using `gcc`:
+You can compile the project using `CMake`:
 
 ```bash
-gcc main.c -o main.out
-./main.out <damage>
+mkdir build
+cd build
+cmake ..
+make
+./bin/Armor <damage>
 ```
 
 **Example:**
